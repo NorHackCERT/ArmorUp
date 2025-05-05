@@ -22,26 +22,26 @@ ArmorUp is designed to be simple, fast, and effective — ideal for students, te
 
 ## What Makes ArmorUp Special?
 
-### 🏫 Tailored for Schools and Students
+###   Tailored for Schools and Students
 - Specifically built for education environments and general users.
 - No unnecessary complexity or enterprise-only focus.
 
-### 🔄 Complete Automation
+###   Complete Automation
 - Combines Windows Update and Security Hardening in a single step.
 
-### 📚 Professional Quality Documentation
+###   Professional Quality Documentation
 - Clear README, usage manuals, and a security guide.
 
-### 🧩 No Third-Party Dependencies
+###   No Third-Party Dependencies
 - No installations required; fully native batch and PowerShell scripts.
 
-### 🔐 Multi-Layered Security
+###   Multi-Layered Security
 - Covers network protocols, privacy settings, ransomware protection, and physical security.
 
-### ⚡ Lightweight and Fast
+###   Lightweight and Fast
 - Executes quickly without slowing down the system.
 
-### 🌍 Open Source and Globally Accessible
+###   Open Source and Globally Accessible
 - Open under the MIT License for everyone to use, modify, and improve.
 
 > **ArmorUp bridges the gap between basic users and professional-grade security — without complexity.**
@@ -50,8 +50,10 @@ ArmorUp is designed to be simple, fast, and effective — ideal for students, te
 
 ## Contents
 
-- `ArmorUp_Security_Complete_v1.0.bat` — Main script to update Windows and apply full security hardening.
+- `ArmorUp_Security_Complete_v1.0.bat` — Legacy version of the security hardening script.
+- `ArmorUp_Security_Complete_v1.1.bat` — Latest version with full security and privacy improvements.
 - `Enhanced_Security_Check_Script.ps1` — PowerShell script to verify the applied security settings.
+- `ArmorUp_GUI.ps1` — Python-based GUI launcher for the security hardening toolkit.
 - `LICENSE` — MIT License (open-source, free to use and modify).
 
 ---
@@ -82,8 +84,8 @@ ArmorUp is designed to be simple, fast, and effective — ideal for students, te
 - Log in as an administrator.
 - Ensure your device has an internet connection.
 
-### 2. Running ArmorUp
-- Right-click `ArmorUp_Security_Complete_v1.0.bat` and select **Run as administrator**.
+### 2. Running ArmorUp (CLI method)
+- Right-click `ArmorUp_Security_Complete_v1.1.bat` and select **Run as administrator**.
 - Allow the script to complete:
   - Windows Update will be triggered.
   - Security configurations will be automatically applied.
@@ -98,6 +100,26 @@ ArmorUp is designed to be simple, fast, and effective — ideal for students, te
   ```
 - Then, right-click `Enhanced_Security_Check_Script.ps1` and select **Run with PowerShell**.
 - Confirm that all security settings are correctly applied.
+
+---
+
+## GUI Version (Optional)
+
+ArmorUp includes an optional graphical user interface (GUI) for simplified interaction.
+
+**Features:**
+- One-click execution of `ArmorUp_Security_Complete_v1.1.bat`
+- Run security verification script
+- Reboot button for convenience
+- Real-time console output feedback
+
+> Built with native PowerShell and Windows Forms — no external dependencies required.
+
+### Screenshot
+
+![ArmorUp GUI Screenshot](assets/ArmorUp_GUI_Screenshot.jpg)
+
+> To launch the GUI, right-click `ArmorUp_GUI.ps1` and select **Run with PowerShell**.
 
 ---
 
