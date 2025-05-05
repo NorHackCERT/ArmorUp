@@ -41,7 +41,7 @@ $runBtn = New-Object System.Windows.Forms.Button
 $runBtn.Text = "Run ArmorUp"
 $runBtn.Size = New-Object System.Drawing.Size(110,30)
 $runBtn.Location = New-Object System.Drawing.Point(20,180)
-$runBtn.Add_Click({ Run-AndLog "Start-Process -FilePath 'ArmorUp_Security_Complete_v1.1.bat' -Verb RunAs" })
+$runBtn.Add_Click({ Run-AndLog "Start-Process -FilePath 'ArmorUp_Security_Complete_v1.2.bat' -Verb RunAs" })
 $form.Controls.Add($runBtn)
 
 # Run Check Script Button
