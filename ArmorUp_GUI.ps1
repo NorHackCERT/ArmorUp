@@ -23,6 +23,8 @@ $outputBox.ScrollBars = "Vertical"
 $outputBox.Size = New-Object System.Drawing.Size(360,100)
 $outputBox.Location = New-Object System.Drawing.Point(20,60)
 $outputBox.ReadOnly = $true
+$outputBox.WordWrap = $false
+$outputBox.ScrollBars = 'Both'
 $form.Controls.Add($outputBox)
 
 function Run-AndLog {
@@ -57,7 +59,7 @@ $rebootBtn = New-Object System.Windows.Forms.Button
 $rebootBtn.Text = "Reboot"
 $rebootBtn.Size = New-Object System.Drawing.Size(110,30)
 $rebootBtn.Location = New-Object System.Drawing.Point(280,180)
-$rebootBtn.Add_Click({ shutdown /r /t 5 })
+$rebootBtn.Add_Click({ Start-Process "cmd.exe" "/c shutdown /r /t 5" -Verb RunAs })
 $form.Controls.Add($rebootBtn)
 
 # Show form

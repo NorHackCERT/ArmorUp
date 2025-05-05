@@ -1,4 +1,10 @@
 # ArmorUp
+
+<p align="center">
+  <img src="assets/ArmorUp.png" alt="ArmorUp Logo" width="300"/>
+</p>
+
+# ArmorUp
 Comprehensive Windows Security and Privacy Toolkit – Ideal for Schools, Students, and General Users.
 ---
 
@@ -51,10 +57,11 @@ ArmorUp is designed to be simple, fast, and effective — ideal for students, te
 ## Contents
 
 - `ArmorUp_Security_Complete_v1.0.bat` — Legacy version of the security hardening script.
-- `ArmorUp_Security_Complete_v1.1.bat` — Latest version with full security and privacy improvements.
-- `ArmorUp_v1.2.bat` — Now with GUI support.
+- `ArmorUp_Security_Complete_v1.1.bat` — Previous version with full security and privacy improvements.
+- `ArmorUp v1.2.bat` — Current main script for full system hardening.
 - `Enhanced_Security_Check_Script.ps1` — PowerShell script to verify the applied security settings.
-- `ArmorUp_GUI.ps1` — Python-based GUI launcher for the security hardening toolkit.
+- `ArmorUp_GUI.ps1` — PowerShell GUI launcher for the toolkit.
+- `Start-GUI.ps1` — Launch helper to bypass execution policy and start the GUI.
 - `LICENSE` — MIT License (open-source, free to use and modify).
 
 ---
@@ -86,7 +93,7 @@ ArmorUp is designed to be simple, fast, and effective — ideal for students, te
 - Ensure your device has an internet connection.
 
 ### 2. Running ArmorUp (CLI method)
-- Right-click `ArmorUp_v1.2.bat` and select **Run as administrator**.
+- Right-click `ArmorUp v1.2.bat` and select **Run as administrator**.
 - Allow the script to complete:
   - Windows Update will be triggered.
   - Security configurations will be automatically applied.
@@ -109,7 +116,7 @@ ArmorUp is designed to be simple, fast, and effective — ideal for students, te
 ArmorUp includes an optional graphical user interface (GUI) for simplified interaction.
 
 **Features:**
-- One-click execution of `ArmorUp_v1.2.bat`
+- One-click execution of `ArmorUp v1.2.bat`
 - Run security verification script
 - Reboot button for convenience
 - Real-time console output feedback
@@ -120,7 +127,27 @@ ArmorUp includes an optional graphical user interface (GUI) for simplified inter
 
 ![ArmorUp GUI Screenshot](assets/ArmorUp_GUI_Screenshot.jpg)
 
-> To launch the GUI, right-click `ArmorUp_GUI.ps1` and select **Run with PowerShell**.
+> To launch the GUI, run `Start-GUI.ps1` (bypasses policy) or `ArmorUp_GUI.ps1` (if execution is already allowed).
+
+### ℹ️ PowerShell Script Execution Policy
+
+If you encounter an error like:
+
+> File ... cannot be loaded because running scripts is disabled on this system.
+
+Run the following command in **PowerShell as Administrator** to temporarily allow the GUI to run:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+Then launch the GUI with:
+
+```powershell
+.\ArmorUp_GUI.ps1
+```
+
+This does **not** change system-wide security settings and only applies during this PowerShell session.
 
 ---
 
